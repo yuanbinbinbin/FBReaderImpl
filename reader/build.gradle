@@ -55,7 +55,7 @@ publish{
     groupId = "com.github.binbinrd"
     artifactId = "fbreaderimpl"
     publishVersion = "1.0.0"
-    repoName = "FBReader"
+    repoName = "IReader"
     desc = 'An Extended Library of FBReader, Modified UI, Supports Pinyin'
     website = 'https://github.com/novoda/bintray-release'
 }
