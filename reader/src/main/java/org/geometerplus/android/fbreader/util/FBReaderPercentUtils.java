@@ -8,6 +8,8 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.geometerplus.zlibrary.ui.android.library.FBReaderConfig;
+
 /**
  * desc:<br>
  * author : yuanbin<br>

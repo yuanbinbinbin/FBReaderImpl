@@ -24,7 +24,6 @@ import java.io.StringWriter;
 import java.util.*;
 
 import android.annotation.TargetApi;
-import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.content.*;
 import android.database.Cursor;
@@ -38,7 +37,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import org.geometerplus.android.fbreader.dialog.MenuDialog;
-import org.geometerplus.android.fbreader.util.FBReaderConfig;
+import org.geometerplus.zlibrary.ui.android.library.FBReaderConfig;
 import org.geometerplus.android.fbreader.util.FBReaderReadTimeUtils;
 import org.geometerplus.fbreader.util.TurnPageJudgeUtil;
 import org.geometerplus.zlibrary.core.application.ZLApplication;
@@ -54,7 +53,6 @@ import org.geometerplus.zlibrary.text.view.ZLTextView;
 
 import org.geometerplus.zlibrary.ui.android.R;
 import org.geometerplus.zlibrary.ui.android.error.ErrorKeys;
-import org.geometerplus.zlibrary.ui.android.library.ZLAndroidApplication;
 import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary;
 import org.geometerplus.zlibrary.ui.android.view.AndroidFontUtil;
 import org.geometerplus.zlibrary.ui.android.view.ZLAndroidWidget;
@@ -1023,7 +1021,6 @@ public final class FBReader extends FBReaderMainActivity implements ZLApplicatio
 	private BroadcastReceiver myBatteryInfoReceiver = new BroadcastReceiver() {
 		public void onReceive(Context context, Intent intent) {
 			final int level = intent.getIntExtra("level", 100);
-			final ZLAndroidApplication application = (ZLAndroidApplication)getApplication();
 			setBatteryLevel(level);
 			switchWakeLock(
 				hasWindowFocus() &&

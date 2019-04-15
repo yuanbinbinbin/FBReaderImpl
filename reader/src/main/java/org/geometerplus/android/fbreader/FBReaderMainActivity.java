@@ -58,7 +58,7 @@ public abstract class FBReaderMainActivity extends AppCompatActivity {
 	}
 
 	public ZLAndroidLibrary getZLibrary() {
-		return ((ZLAndroidApplication)getApplication()).library();
+		return FBReaderConfig.library();
 	}
 
 	/* ++++++ SCREEN BRIGHTNESS ++++++ */

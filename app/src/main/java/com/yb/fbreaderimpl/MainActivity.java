@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void startRead(View view) {
+//        openBook("/storage/emulated/0/公主故事7684.epub");
         read("css.epub");
     }
 
