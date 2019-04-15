@@ -53,10 +53,10 @@ task CopyToJniLibs(type: Copy, dependsOn: 'ndkBuild', description: 'copy the nat
 publish{
     userOrg = "yuanbinbin"
     groupId = "com.github.binbinrd"
-    artifactId = "fbreaderimpl"
+    artifactId = "fbreaderimpl_s"
     publishVersion = "1.0.0"
     repoName = "IReader"
-    desc = 'An Extended Library of FBReader, Modified UI, Supports Pinyin'
+    desc = 'An Extended Library of FBReader, Modified UI, Supports Pinyin,don\'t need extends FBReaderApplication'
     website = 'https://github.com/novoda/bintray-release'
 }
 
