@@ -2,11 +2,11 @@
 
 1.create resource 
 --------
-<img src="https://github.com/yuanbinbinbin/FBReaderImpl/tree/master/intro/language/pic/language/step1.png" alt="step1.png" />
+<img src="https://github.com/yuanbinbinbin/FBReaderImpl/blob/master/intro/language/pic/language/step1.png" alt="step1.png" />
 
 2.select your language
 --------
-<img src="https://github.com/yuanbinbinbin/FBReaderImpl/tree/master/intro/language/pic/language/step2.png" alt="step2.png" />
+<img src="https://github.com/yuanbinbinbin/FBReaderImpl/blob/master/intro/language/pic/language/step2.png" alt="step2.png" />
 
 3.copy to new file
 --------
