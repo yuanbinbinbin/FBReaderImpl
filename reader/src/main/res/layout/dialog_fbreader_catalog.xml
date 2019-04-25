@@ -30,7 +30,7 @@
             android:paddingBottom="12dp"
             android:paddingLeft="17dp"
             android:paddingTop="12dp"
-            android:text="目录"
+            android:text="@string/fbreader_menu_catalogue"
             android:textColor="@color/color_fbreader_menu_selected_day"
             android:textSize="14sp" />
 
@@ -41,7 +41,7 @@
             android:layout_weight="1"
             android:paddingBottom="12dp"
             android:paddingTop="12dp"
-            android:text="书签"
+            android:text="@string/fbreader_bookmark"
             android:textColor="#333333"
             android:textSize="14sp" />
     </LinearLayout>

@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="更多设置"
+            android:text="@string/fbreader_menu_more_setting"
             android:textColor="#333333"
             android:textSize="17sp" />
     </RelativeLayout>
@@ -46,7 +46,7 @@
                 <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="行间距"
+                    android:text="@string/fbreader_more_setting_line_spacing"
                     android:textColor="#333333"
                     android:textSize="14sp" />
 
@@ -63,7 +63,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="最小"
+                        android:text="@string/fbreader_more_setting_line_spacing_type_minimum"
                         android:textColor="#333333"
                         android:textSize="14sp" />
 
@@ -73,7 +73,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="较小"
+                        android:text="@string/fbreader_more_setting_line_spacing_type_less"
                         android:textColor="#333333"
                         android:textSize="14sp" />
 
@@ -83,7 +83,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="适中"
+                        android:text="@string/fbreader_more_setting_line_spacing_type_moderate"
                         android:textColor="#333333"
                         android:textSize="14sp" />
 
@@ -93,7 +93,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="较大"
+                        android:text="@string/fbreader_more_setting_line_spacing_type_more"
                         android:textColor="#333333"
                         android:textSize="14sp" />
 
@@ -103,7 +103,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="最大"
+                        android:text="@string/fbreader_more_setting_line_spacing_type_maximum"
                         android:textColor="#333333"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -175,7 +175,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="显示章节名"
+                    android:text="@string/fbreader_more_setting_line_spacing_show_chapter_name"
                     android:textColor="#333333" />
 
                 <ImageView
@@ -200,7 +200,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="显示电量和时间"
+                    android:text="@string/fbreader_more_setting_line_spacing_show_battery_time"
                     android:textColor="#333333" />
 
                 <ImageView

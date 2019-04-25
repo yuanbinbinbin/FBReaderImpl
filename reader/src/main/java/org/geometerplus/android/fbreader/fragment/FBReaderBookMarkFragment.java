@@ -114,7 +114,7 @@ public class FBReaderBookMarkFragment extends Fragment {
     //region 书签相关
     private void showEmptyBookMarkView() {
         mTvCatalogEmptyDesc.setTextColor(grayColor);
-        mTvCatalogEmptyDesc.setText("暂时还没有书签");
+        mTvCatalogEmptyDesc.setText(R.string.fbreader_bookmark_empty);
         boolean isDay = ColorProfile.DAY.equals(myFBReaderApp.ViewOptions.ColorProfileName.getValue());
         if (isDay) {
             //日间模式

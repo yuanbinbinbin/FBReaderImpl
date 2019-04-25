@@ -2,4 +2,52 @@
 <resources>
 	<string name="app_name">FBReader</string>
 	<string name="empty_string"></string>
+	<string name="fbreader_menu_catalogue">Catalogue</string>
+	<string name="fbreader_menu_progress">Progress</string>
+	<string name="fbreader_menu_brightness">Brightness</string>
+	<string name="fbreader_menu_setting">Setting</string>
+	<string name="fbreader_menu_more_setting">More setting</string>
+
+	<string name="fbreader_progress_tips">%1$d / %2$d      current location %3$.2f</string>
+	<string name="fbreader_progress_read_time">Read %d hours %d minutes</string>
+	<string name="fbreader_progress_previous_chapter">Prior chapter</string>
+	<string name="fbreader_progress_next_chapter">Next chapter</string>
+
+	<string name="fbreader_brightness_background_type_daily">Daily</string>
+	<string name="fbreader_brightness_background_type_fresh">Fresh</string>
+	<string name="fbreader_brightness_background_type_light_yellow">Yellow</string>
+	<string name="fbreader_brightness_background_type_light_blue">Blue</string>
+	<string name="fbreader_brightness_background_type_night">Night</string>
+
+
+	<string name="fbreader_setting_turn_page">Animation</string>
+	<string name="fbreader_setting_turn_page_type_simulation">Curl</string>
+	<string name="fbreader_setting_turn_page_type_shift">shift</string>
+	<string name="fbreader_setting_turn_page_type_slide">slide</string>
+	<string name="fbreader_setting_turn_page_type_none">none</string>
+	<string name="fbreader_setting_font">Font</string>
+
+	<string name="fbreader_unknown">Unknown</string>
+
+	<string name="fbreader_catalogue_empty">Catalog is empty</string>
+
+	<string name="fbreader_bookmark">Bookmark</string>
+	<string name="fbreader_bookmark_empty">There are no bookmarks yet.</string>
+	<string name="fbreader_bookmark_add_success">Add bookmark success</string>
+	<string name="fbreader_bookmark_delete_success">Delete bookmark success</string>
+
+	<string name="fbreader_more_setting_line_spacing">Line spacing</string>
+	<string name="fbreader_more_setting_line_spacing_type_minimum">Minimum</string>
+	<string name="fbreader_more_setting_line_spacing_type_less">Less</string>
+	<string name="fbreader_more_setting_line_spacing_type_moderate">Moderate</string>
+	<string name="fbreader_more_setting_line_spacing_type_more">More</string>
+	<string name="fbreader_more_setting_line_spacing_type_maximum">Maximum</string>
+
+	<string name="fbreader_more_setting_line_spacing_show_chapter_name">Show chapter name</string>
+	<string name="fbreader_more_setting_line_spacing_show_battery_time">Show battery and time</string>
+
+	<string name="fbreader_system">System</string>
+
+	<string name="fbreader_turn_chapter_tips_cant_previous">It is the first chapter</string>
+	<string name="fbreader_turn_chapter_tips_cant_next">It is the last chapter</string>
 </resources>

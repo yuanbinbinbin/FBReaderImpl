@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="5dp"
-                android:text="目录"
+                android:text="@string/fbreader_menu_catalogue"
                 android:textColor="@color/color_fbreader_menu_selected_day"
                 android:textSize="10sp" />
         </LinearLayout>
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="5dp"
-                android:text="进度"
+                android:text="@string/fbreader_menu_progress"
                 android:textColor="@color/color_fbreader_menu_unselected_day"
                 android:textSize="10sp" />
         </LinearLayout>
@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="5dp"
-                android:text="亮度"
+                android:text="@string/fbreader_menu_brightness"
                 android:textColor="@color/color_fbreader_menu_unselected_day"
                 android:textSize="10sp" />
         </LinearLayout>
@@ -153,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="5dp"
-                android:text="设置"
+                android:text="@string/fbreader_menu_setting"
                 android:textColor="@color/color_fbreader_menu_unselected_day"
                 android:textSize="10sp" />
         </LinearLayout>
@@ -266,7 +266,7 @@
                     android:paddingBottom="10dp"
                     android:paddingLeft="17dp"
                     android:paddingTop="10dp"
-                    android:text="上一章"
+                    android:text="@string/fbreader_progress_previous_chapter"
                     android:textColor="#333333"
                     android:textSize="13sp" />
 
@@ -287,7 +287,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="17dp"
                     android:paddingTop="10dp"
-                    android:text="下一章"
+                    android:text="@string/fbreader_progress_next_chapter"
                     android:textColor="#333333"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -359,7 +359,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="日常"
+                    android:text="@string/fbreader_brightness_background_type_daily"
                     android:textColor="#333333"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -384,7 +384,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="清新"
+                    android:text="@string/fbreader_brightness_background_type_fresh"
                     android:textColor="#333333"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -409,7 +409,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="米黄"
+                    android:text="@string/fbreader_brightness_background_type_light_yellow"
                     android:textColor="#333333"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -433,7 +433,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="淡蓝"
+                    android:text="@string/fbreader_brightness_background_type_light_blue"
                     android:textColor="#333333"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -457,7 +457,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="夜间"
+                    android:text="@string/fbreader_brightness_background_type_night"
                     android:textColor="#333333"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -526,7 +526,7 @@
                 android:id="@+id/id_menu_bottom_setting_turning_page"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="翻页"
+                android:text="@string/fbreader_setting_turn_page"
                 android:textColor="#333333"
                 android:textSize="13sp" />
 
@@ -540,7 +540,7 @@
                 android:layout_width="50dp"
                 android:layout_height="28dp"
                 android:gravity="center"
-                android:text="仿真"
+                android:text="@string/fbreader_setting_turn_page_type_simulation"
                 android:textColor="#333333"
                 android:textSize="13sp" />
 
@@ -554,7 +554,7 @@
                 android:layout_width="50dp"
                 android:layout_height="28dp"
                 android:gravity="center"
-                android:text="平移"
+                android:text="@string/fbreader_setting_turn_page_type_shift"
                 android:textColor="#333333"
                 android:textSize="13sp" />
 
@@ -568,7 +568,7 @@
                 android:layout_width="50dp"
                 android:layout_height="28dp"
                 android:gravity="center"
-                android:text="滑动"
+                android:text="@string/fbreader_setting_turn_page_type_slide"
                 android:textColor="#333333"
                 android:textSize="13sp" />
 
@@ -582,7 +582,7 @@
                 android:layout_width="50dp"
                 android:layout_height="28dp"
                 android:gravity="center"
-                android:text="无"
+                android:text="@string/fbreader_setting_turn_page_type_none"
                 android:textColor="#333333"
                 android:textSize="13sp" />
         </LinearLayout>
@@ -602,7 +602,7 @@
                     android:id="@+id/id_menu_bottom_setting_font"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="字体"
+                    android:text="@string/fbreader_setting_font"
                     android:textColor="#333333"
                     android:textSize="13sp" />
 
@@ -611,7 +611,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="24dp"
-                    android:text="华文宋体"
+                    tools:text="华文宋体"
                     android:textColor="#333333"
                     android:textSize="13sp" />
 
@@ -636,7 +636,7 @@
                     android:id="@+id/id_menu_bottom_setting_more"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="更多设置"
+                    android:text="@string/fbreader_menu_more_setting"
                     android:textColor="#333333"
                     android:textSize="13sp" />
 

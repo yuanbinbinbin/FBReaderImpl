@@ -116,11 +116,11 @@ public class MenuDialog extends Dialog {
                 if (!hasBookMark) {
                     dismiss();
                     myFBReaderApp.addBookmark();
-                    FBReader.toast("添加书签成功");
+                    FBReader.toast(mContext.getString(R.string.fbreader_bookmark_add_success));
                 } else {
                     dismiss();
                     myFBReaderApp.deleteBookmark();
-                    FBReader.toast("删除书签成功");
+                    FBReader.toast(mContext.getString(R.string.fbreader_bookmark_delete_success));
                 }
             }
         });
@@ -486,7 +486,7 @@ public class MenuDialog extends Dialog {
             public void onClick(View v) {
                 TOCTree tocElement = myFBReaderApp.getNextTOCElement();
                 if (tocElement == null) {
-                    FBReader.toast("已到最后一章");
+                    FBReader.toast(mContext.getString(R.string.fbreader_turn_chapter_tips_cant_next));
                 } else {
                     startPosition.setCursor(myFBReaderApp.BookTextView.getStartCursor());
                     myFBReaderApp.addInvisibleBookmark();
@@ -503,7 +503,7 @@ public class MenuDialog extends Dialog {
             public void onClick(View v) {
                 TOCTree tocElement = myFBReaderApp.getPreTOCElement();
                 if (tocElement == null) {
-                    FBReader.toast("已到第一章");
+                    FBReader.toast(mContext.getString(R.string.fbreader_turn_chapter_tips_cant_previous));
                 } else {
                     startPosition.setCursor(myFBReaderApp.BookTextView.getStartCursor());
                     myFBReaderApp.addInvisibleBookmark();
@@ -525,7 +525,7 @@ public class MenuDialog extends Dialog {
         if (tocElement != null) {
             mTvProgressTitle.setText(tocElement.getText());
         } else {
-            mTvProgressTitle.setText("未知");
+            mTvProgressTitle.setText(R.string.fbreader_unknown);
         }
 
         ZLTextView textView = myFBReaderApp.getTextView();
@@ -533,8 +533,7 @@ public class MenuDialog extends Dialog {
         int currentPosition = pagePosition.Current;
         int totalPage = pagePosition.Total;
         float percent = 100f * currentPosition / totalPage;
-        String progress = "全书%1$d / %2$d页     当前位置%3$.2f";
-        mTvProgressProgress.setText(String.format(progress, currentPosition, totalPage, percent) + "%");
+        mTvProgressProgress.setText(mContext.getString(R.string.fbreader_progress_tips, currentPosition, totalPage, percent) + "%");
         mProgressSeekBar.setMax(pagePosition.Total - 1);
         mProgressSeekBar.setProgress(currentPosition - 1);
 
@@ -573,12 +572,9 @@ public class MenuDialog extends Dialog {
     };
 
     private String createTime(int s) {
-        StringBuilder readerTime = new StringBuilder("已阅读");
-        readerTime.append(s / 60 / 60);
-        readerTime.append("小时");
-        readerTime.append(s / 60);
-        readerTime.append("分钟");
-        return readerTime.toString();
+        int hour = s/60/60;
+        int minute = s/60;
+        return mContext.getString(R.string.fbreader_progress_read_time, hour, minute);
     }
     //endregion
 
@@ -903,7 +899,7 @@ public class MenuDialog extends Dialog {
         int progress = myFBReaderApp.ViewOptions.getTextStyleCollection().getBaseStyle().FontSizeOption.getValue();
         mSettingSeekBar.setProgress(progress - 24);
         //mTvSettingFontSelected.setText(myFBReaderApp.ViewOptions.getTextStyleCollection().getBaseStyle().FontFamilyOption.getValue());
-        mTvSettingFontSelected.setText("系统");
+        mTvSettingFontSelected.setText(R.string.fbreader_system);
         updatePageTurningMode();
     }
 
