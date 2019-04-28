@@ -50,4 +50,11 @@
 
 	<string name="fbreader_turn_chapter_tips_cant_previous">It is the first chapter</string>
 	<string name="fbreader_turn_chapter_tips_cant_next">It is the last chapter</string>
+
+	<string name="fbreader_more_setting_alignment">Alignment</string>
+	<string name="fbreader_more_setting_alignment_default">Default</string>
+	<string name="fbreader_more_setting_alignment_left">Left</string>
+	<string name="fbreader_more_setting_alignment_right">Right</string>
+	<string name="fbreader_more_setting_alignment_center">Centered</string>
+	<string name="fbreader_more_setting_alignment_justified">Justified</string>
 </resources>

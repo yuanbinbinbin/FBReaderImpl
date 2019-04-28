@@ -50,4 +50,11 @@
 
     <string name="fbreader_turn_chapter_tips_cant_previous">已到第一章</string>
     <string name="fbreader_turn_chapter_tips_cant_next">已到最后一章</string>
+
+    <string name="fbreader_more_setting_alignment">对齐</string>
+    <string name="fbreader_more_setting_alignment_default">默认</string>
+    <string name="fbreader_more_setting_alignment_left">左</string>
+    <string name="fbreader_more_setting_alignment_right">右</string>
+    <string name="fbreader_more_setting_alignment_center">居中</string>
+    <string name="fbreader_more_setting_alignment_justified">对齐</string>
 </resources>

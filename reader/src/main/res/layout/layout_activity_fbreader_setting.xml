@@ -110,6 +110,81 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:padding="17dp">
+
+                <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbreader_more_setting_alignment"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/bg_fbreader_setting_line_height"
+                    android:orientation="horizontal">
+
+                    <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
+                        android:id="@+id/id_activity_fbreader_setting_alignment_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/fbreader_more_setting_alignment_default"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
+                        android:id="@+id/id_activity_fbreader_setting_alignment_left"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/fbreader_more_setting_alignment_left"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
+                        android:id="@+id/id_activity_fbreader_setting_alignment_right"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/fbreader_more_setting_alignment_right"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
+                        android:id="@+id/id_activity_fbreader_setting_alignment_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/fbreader_more_setting_alignment_center"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
+                        android:id="@+id/id_activity_fbreader_setting_alignment_justified"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/fbreader_more_setting_alignment_justified"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
             <RelativeLayout
                 android:id="@+id/id_activity_fbreader_setting_pinyi_container"
                 android:layout_width="match_parent"

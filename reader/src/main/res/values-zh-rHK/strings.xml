@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FBReader</string>
+    <string name="empty_string"></string>
+    <string name="fbreader_menu_catalogue">目錄</string>
+    <string name="fbreader_menu_progress">進度</string>
+    <string name="fbreader_menu_brightness">高亮</string>
+    <string name="fbreader_menu_setting">設置</string>
+    <string name="fbreader_menu_more_setting">更多設置</string>
+
+    <string name="fbreader_progress_tips">全書%1$d / %2$d頁     當前位置%3$.2f</string>
+    <string name="fbreader_progress_read_time">已閲讀%d小時%d分鐘</string>
+    <string name="fbreader_progress_previous_chapter">上一章</string>
+    <string name="fbreader_progress_next_chapter">下一章</string>
+
+    <string name="fbreader_brightness_background_type_daily">日常</string>
+    <string name="fbreader_brightness_background_type_fresh">清新</string>
+    <string name="fbreader_brightness_background_type_light_yellow">米黃</string>
+    <string name="fbreader_brightness_background_type_light_blue">淡藍</string>
+    <string name="fbreader_brightness_background_type_night">夜間</string>
+
+
+    <string name="fbreader_setting_turn_page">翻頁</string>
+    <string name="fbreader_setting_turn_page_type_simulation">仿真</string>
+    <string name="fbreader_setting_turn_page_type_shift">平移</string>
+    <string name="fbreader_setting_turn_page_type_slide">滑動</string>
+    <string name="fbreader_setting_turn_page_type_none">無</string>
+    <string name="fbreader_setting_font">字體</string>
+
+    <string name="fbreader_unknown">未知</string>
+
+    <string name="fbreader_catalogue_empty">目錄爲空</string>
+
+    <string name="fbreader_bookmark">書簽</string>
+    <string name="fbreader_bookmark_empty">暫時還沒有書簽</string>
+    <string name="fbreader_bookmark_add_success">添加書簽成功</string>
+    <string name="fbreader_bookmark_delete_success">刪除書簽成功</string>
+
+    <string name="fbreader_more_setting_line_spacing">行間距</string>
+    <string name="fbreader_more_setting_line_spacing_type_minimum">最小</string>
+    <string name="fbreader_more_setting_line_spacing_type_less">較小</string>
+    <string name="fbreader_more_setting_line_spacing_type_moderate">適中</string>
+    <string name="fbreader_more_setting_line_spacing_type_more">較大</string>
+    <string name="fbreader_more_setting_line_spacing_type_maximum">最大</string>
+
+    <string name="fbreader_more_setting_line_spacing_show_chapter_name">顯示章節名</string>
+    <string name="fbreader_more_setting_line_spacing_show_battery_time">顯示電量和電池</string>
+
+    <string name="fbreader_system">系統</string>
+
+    <string name="fbreader_turn_chapter_tips_cant_previous">已到第一章</string>
+    <string name="fbreader_turn_chapter_tips_cant_next">已到最後一章</string>
+
+    <string name="fbreader_more_setting_alignment">對齊</string>
+    <string name="fbreader_more_setting_alignment_default">默認</string>
+    <string name="fbreader_more_setting_alignment_left">左</string>
+    <string name="fbreader_more_setting_alignment_right">右</string>
+    <string name="fbreader_more_setting_alignment_center">居中</string>
+    <string name="fbreader_more_setting_alignment_justified">對齊</string>
+</resources>
