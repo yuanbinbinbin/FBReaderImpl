@@ -32,7 +32,8 @@
             android:layout_height="45dp"
             android:layout_toLeftOf="@id/id_menu_head_book_mark"
             android:padding="12dp"
-            android:src="@drawable/ic_fbreader_menu_head_share_day" />
+            android:src="@drawable/ic_fbreader_menu_head_share_day"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <ImageView
@@ -337,7 +338,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
 
 
             <LinearLayout
@@ -361,7 +363,8 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/fbreader_brightness_background_type_daily"
                     android:textColor="#333333"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:visibility="gone" />
             </LinearLayout>
 
 
@@ -386,7 +389,8 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/fbreader_brightness_background_type_fresh"
                     android:textColor="#333333"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:visibility="gone" />
             </LinearLayout>
 
 
@@ -411,7 +415,8 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/fbreader_brightness_background_type_light_yellow"
                     android:textColor="#333333"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <LinearLayout
@@ -435,7 +440,8 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/fbreader_brightness_background_type_light_blue"
                     android:textColor="#333333"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <LinearLayout
@@ -459,19 +465,21 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/fbreader_brightness_background_type_night"
                     android:textColor="#333333"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:visibility="gone" />
             </LinearLayout>
 
 
         </LinearLayout>
     </LinearLayout>
+
     <ImageView
         android:id="@+id/id_menu_bottom_light_shadow"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:visibility="gone"
         android:layout_above="@id/id_menu_bottom_light_container"
-        android:background="@drawable/ic_fbreader_shadow" />
+        android:background="@drawable/ic_fbreader_shadow"
+        android:visibility="gone" />
     <!--endregion-->
 
     <!--region setting-->
@@ -596,7 +604,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:padding="17dp">
+                android:padding="17dp"
+                android:visibility="gone">
 
                 <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
                     android:id="@+id/id_menu_bottom_setting_font"
@@ -611,9 +620,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="24dp"
-                    tools:text="华文宋体"
                     android:textColor="#333333"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    tools:text="华文宋体" />
 
                 <ImageView
                     android:id="@+id/id_menu_bottom_setting_font_arrow"
@@ -649,13 +658,14 @@
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
+
     <ImageView
         android:id="@+id/id_menu_bottom_setting_shadow"
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:layout_above="@id/id_menu_bottom_setting_container"
         android:background="@drawable/ic_fbreader_shadow"
-        android:visibility="gone"/>
+        android:visibility="gone" />
     <!--endregion-->
 
 </RelativeLayout>

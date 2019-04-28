@@ -300,11 +300,34 @@ public final class FBReader extends FBReaderMainActivity implements ZLApplicatio
 
 		myFBReaderApp.setExternalFileOpener(new ExternalFileOpener(this));
 
-		getWindow().setFlags(
-			WindowManager.LayoutParams.FLAG_FULLSCREEN,
-			myShowStatusBarFlag ? 0 : WindowManager.LayoutParams.FLAG_FULLSCREEN
-		);
-
+		if(myShowStatusBarFlag){
+			getWindow().setFlags(
+					WindowManager.LayoutParams.FLAG_FULLSCREEN,
+					0
+			);
+		} else {
+			Window window = getWindow();
+			window.setFlags(
+					WindowManager.LayoutParams.FLAG_FULLSCREEN,
+					WindowManager.LayoutParams.FLAG_FULLSCREEN
+			);
+			try {
+				WindowManager.LayoutParams wlp = window.getAttributes();
+				wlp.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+				window.setAttributes(wlp);
+			} catch (Throwable t) {
+			}
+			try {
+				View decorView = window.getDecorView();
+				int systemUiVisibility = decorView.getSystemUiVisibility();
+				int flags = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+						| View.SYSTEM_UI_FLAG_FULLSCREEN;
+				systemUiVisibility |= flags;
+				window.getDecorView().setSystemUiVisibility(systemUiVisibility);
+			} catch (Throwable t) {
+			}
+		}
+//		NotchFit.fit(this, NotchScreenType.FULL_SCREEN, null);
 		//文字搜索 popupWindow：向左箭头，关闭、向右箭头
 		if (myFBReaderApp.getPopupById(TextSearchPopup.ID) == null) {
 			new TextSearchPopup(myFBReaderApp);

@@ -3,6 +3,7 @@ package org.geometerplus.android.fbreader.dialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -20,14 +22,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.geometerplus.android.fbreader.FBReader;
 import org.geometerplus.android.fbreader.fragment.FBReaderBookMarkFragment;
 import org.geometerplus.android.fbreader.fragment.FBReaderCatalogFragment;
+import org.geometerplus.android.fbreader.util.AndroidImageSynchronizer;
+import org.geometerplus.fbreader.Paths;
+import org.geometerplus.fbreader.book.Book;
+import org.geometerplus.fbreader.book.CoverUtil;
 import org.geometerplus.fbreader.fbreader.FBReaderApp;
+import org.geometerplus.fbreader.formats.PluginCollection;
 import org.geometerplus.zlibrary.core.application.ZLApplication;
+import org.geometerplus.zlibrary.core.image.ZLImage;
+import org.geometerplus.zlibrary.core.image.ZLImageProxy;
 import org.geometerplus.zlibrary.ui.android.R;
+import org.geometerplus.zlibrary.ui.android.image.ZLAndroidImageData;
+import org.geometerplus.zlibrary.ui.android.image.ZLAndroidImageManager;
 import org.geometerplus.zlibrary.ui.android.util.ZLAndroidColorUtil;
 
 import java.util.ArrayList;
@@ -41,6 +53,7 @@ import java.util.List;
 public class FBReaderCatalogDialog extends DialogFragment {
 
     private View mRootView;
+    private ImageView mIvCover;
     private TextView mTvTitle;
     private TextView mTvMenuCatalog;
     private TextView mTvMenuBookMark;
@@ -52,6 +65,8 @@ public class FBReaderCatalogDialog extends DialogFragment {
     private int lineColor;
     private int selectPosition;
     private int backgroundColor;
+
+    private AndroidImageSynchronizer myImageSynchronizer;
 
     public static FBReaderCatalogDialog newInstance() {
         FBReaderCatalogDialog fragment = new FBReaderCatalogDialog();
@@ -74,6 +89,14 @@ public class FBReaderCatalogDialog extends DialogFragment {
         initListener();
     }
 
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+        if (myImageSynchronizer != null) {
+            myImageSynchronizer.clear();
+        }
+    }
+
     private void initLayout() {
         Dialog dialog = getDialog();
         if (dialog == null) {
@@ -92,10 +115,26 @@ public class FBReaderCatalogDialog extends DialogFragment {
             wlp.width = (int) (wlp.width * 0.85);
             wlp.height = WindowManager.LayoutParams.MATCH_PARENT;
             window.setAttributes(wlp);
+            try {
+                wlp.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+                window.setAttributes(wlp);
+            } catch (Throwable t) {
+            }
+            try {
+                View decorView = window.getDecorView();
+                int systemUiVisibility = decorView.getSystemUiVisibility();
+                int flags = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN;
+                systemUiVisibility |= flags;
+                window.getDecorView().setSystemUiVisibility(systemUiVisibility);
+            } catch (Throwable t) {
+            }
         }
     }
 
     private void initView() {
+        myImageSynchronizer = new AndroidImageSynchronizer(getActivity());
+        mIvCover = (ImageView) mRootView.findViewById(R.id.id_dialog_fbreader_catalog_book_cover);
         mTvTitle = (TextView) mRootView.findViewById(R.id.id_dialog_fbreader_catalog_title);
         mTvMenuCatalog = (TextView) mRootView.findViewById(R.id.id_dialog_fbreader_catalog_menu_catalog);
         mTvMenuBookMark = (TextView) mRootView.findViewById(R.id.id_dialog_fbreader_catalog_menu_book_mark);
@@ -108,7 +147,54 @@ public class FBReaderCatalogDialog extends DialogFragment {
         selectColor = ZLAndroidColorUtil.rgb(app.ViewOptions.getColorProfile().MenuSelectedTextOption.getValue());
         lineColor = ZLAndroidColorUtil.rgb(app.ViewOptions.getColorProfile().ThinLineOption.getValue());
         updatePreference();
+        final PluginCollection pluginCollection = PluginCollection.Instance(Paths.systemInfo(getContext()));
+        setupCover(app.Model.Book, pluginCollection);
     }
+
+    //region bookCover
+    private void setupCover(Book book, PluginCollection pluginCollection) {
+        mIvCover.setVisibility(View.GONE);
+
+        final ZLImage image = CoverUtil.getCover(book, pluginCollection);
+
+        if (image == null) {
+            return;
+        }
+
+        if (image instanceof ZLImageProxy) {
+            ((ZLImageProxy) image).startSynchronization(myImageSynchronizer, new Runnable() {
+                public void run() {
+                    getActivity().runOnUiThread(new Runnable() {
+                        public void run() {
+                            setCover(mIvCover, image);
+                        }
+                    });
+                }
+            });
+        } else {
+            setCover(mIvCover, image);
+        }
+    }
+
+    private void setCover(ImageView coverView, ZLImage image) {
+        try {
+            final ZLAndroidImageData data =
+                    ((ZLAndroidImageManager) ZLAndroidImageManager.Instance()).getImageData(image);
+            if (data == null) {
+                return;
+            }
+
+            final Bitmap coverBitmap = data.getFullSizeBitmap();
+            if (coverBitmap == null) {
+                return;
+            }
+
+            coverView.setVisibility(View.VISIBLE);
+            coverView.setImageBitmap(coverBitmap);
+        } catch (Throwable t) {
+        }
+    }
+    //endregion
 
     private void initData() {
         selectPosition = 0;
