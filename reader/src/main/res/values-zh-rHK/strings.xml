@@ -8,7 +8,7 @@
     <string name="fbreader_menu_setting">設置</string>
     <string name="fbreader_menu_more_setting">更多設置</string>
 
-    <string name="fbreader_progress_tips">全書%1$d / %2$d頁     當前位置%3$.2f</string>
+    <string name="fbreader_progress_tips">%1$d / %2$d頁     當前位置%3$.2f</string>
     <string name="fbreader_progress_read_time">已閲讀%d小時%d分鐘</string>
     <string name="fbreader_progress_previous_chapter">上一章</string>
     <string name="fbreader_progress_next_chapter">下一章</string>

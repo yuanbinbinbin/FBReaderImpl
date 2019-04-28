@@ -257,19 +257,16 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:orientation="horizontal">
 
-                <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
+                <ImageView
                     android:id="@+id/id_menu_bottom_progress_last_chapter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="17dp"
-                    android:paddingTop="10dp"
-                    android:text="@string/fbreader_progress_previous_chapter"
-                    android:textColor="#333333"
-                    android:textSize="13sp" />
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_fbreader_back_day" />
 
                 <SeekBar
                     android:id="@+id/id_menu_bottom_progress_seek_bar"
@@ -281,16 +278,14 @@
                     android:background="@null"
                     android:max="100" />
 
-                <org.geometerplus.android.fbreader.weight.FBReaderPercentTextView
+                <ImageView
                     android:id="@+id/id_menu_bottom_progress_next_chapter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="10dp"
-                    android:paddingRight="17dp"
-                    android:paddingTop="10dp"
-                    android:text="@string/fbreader_progress_next_chapter"
-                    android:textColor="#333333"
-                    android:textSize="13sp" />
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="12dp"
+                    android:padding="5dp"
+                    android:rotation="180"
+                    android:src="@drawable/ic_fbreader_back_day" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

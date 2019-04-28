@@ -8,7 +8,7 @@
     <string name="fbreader_menu_setting">设置</string>
     <string name="fbreader_menu_more_setting">更多设置</string>
 
-    <string name="fbreader_progress_tips">全书%1$d / %2$d页     当前位置%3$.2f</string>
+    <string name="fbreader_progress_tips">%1$d / %2$d页     当前位置%3$.2f</string>
     <string name="fbreader_progress_read_time">已阅读%d小时%d分钟</string>
     <string name="fbreader_progress_previous_chapter">上一章</string>
     <string name="fbreader_progress_next_chapter">下一章</string>
