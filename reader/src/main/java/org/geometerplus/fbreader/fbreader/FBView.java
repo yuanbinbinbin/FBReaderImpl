@@ -716,7 +716,7 @@ public final class FBView extends ZLTextView {
         }
     }
 
-    private class FooterKaoLaStyle extends Footer {
+    private class FooterStyle extends Footer {
 
         @Override
         public void paint(ZLPaintContext context) {
@@ -811,11 +811,11 @@ public final class FBView extends ZLTextView {
                 }
                 break;
             case SCROLLBAR_SHOW_AS_FOOTER_KAO_LA_STYLE:
-                if (!(myFooter instanceof FooterKaoLaStyle)) {
+                if (!(myFooter instanceof FooterStyle)) {
                     if (myFooter != null) {
                         myReader.removeTimerTask(myFooter.UpdateTask);
                     }
-                    myFooter = new FooterKaoLaStyle();
+                    myFooter = new FooterStyle();
                     myReader.addTimerTask(myFooter.UpdateTask, 15000);
                 }
                 break;

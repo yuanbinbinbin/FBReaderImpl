@@ -1332,10 +1332,10 @@ public final class FBReader extends FBReaderMainActivity implements ZLApplicatio
 
 	//region logger
 	private static boolean isOpen = false;
-	private static String logTAG = "KoaLaPush";
+	private static String logTAG = "FBReaderImpl";
 
 	/**
-	 * @param TAG 可传空 , 默认为KoaLaPush
+	 * @param TAG 可传空 , 默认为FBReaderImpl
 	 */
 	public static void openLog(String TAG) {
 		isOpen = true;
